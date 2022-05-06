@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <title>Test-Task Layout</title>
+    <style>
+      @font-face {
+        font-family: "Roboto";
+        src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      .page {
+        display: flex;
+        justify-content: center;
+      }
+
+      .card {
+        width: 400px;
+        background-color: rgba(211, 211, 211, 0.466);
+        padding: 5px;
+      }
+
+      .card--inner {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px 15px 20px 15px;
+      }
+
+      .card__info {
+        background-color: rgba(211, 211, 211, 0.466);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50px;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      .card__coin,
+      .card__tether {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .card__tether {
+        background-image: url('./tether-usdt-logo.svg');
+        background-repeat: no-repeat;
+        width: 100%;
+      }
+
+      .card__coin {
+        background-image: url('./usd-coin-usdc-seeklogo.com.svg');
+        background-repeat: no-repeat;
+        width: 100%;
+      }
+
+      .card__text {
+        padding-left: 30px;
+      }
+
+      .button {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .button__yes {
+        cursor: pointer;
+        background-color: #E30B5C;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        width: 90px;
+        height: 30px;
+      }
+
+      .button__no {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+      }
+
+      .price{
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body class="page">
+    <div class="card">
+      <div class="card--inner">
+        <header class="button">
+          <button class="button__no">
+            Unclaimed fees
+          </button>
+          <button class="button__yes">
+            Collect fees
+          </button>
+        </header>
+
+        <h1 class="price">$8.80</h1>
+
+        <div class="card__info">
+
+          <div class="card__coin">
+            <span class="card__text">USDC</span>
+            <div>4.74</div>
+          </div>
+
+          <div class="card__tether">
+            <span class="card__text">USDT</span>
+            <div>4.065</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
